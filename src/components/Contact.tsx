@@ -15,7 +15,7 @@ export default function Contact() {
     e.preventDefault();
     // WhatsApp integration
     const message = `Halo Clinic Matic,%0A%0ANama: ${formData.name}%0ATelepon: ${formData.phone}%0AEmail: ${formData.email}%0AModel Mobil: ${formData.carModel}%0APesan: ${formData.message}`;
-    window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/6285117266788?text=${message}`, '_blank');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -143,7 +143,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Telepon</h4>
-                    <p className="text-white/90">+62 821-9876-5432</p>
+                    <p className="text-white/90">+62 851-1726-6788</p>
                   </div>
                 </div>
 
@@ -220,7 +220,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/6285117266788"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-lg transition-all transform hover:scale-110"

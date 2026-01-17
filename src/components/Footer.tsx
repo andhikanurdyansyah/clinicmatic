@@ -21,7 +21,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com/clinicmatic"
+                href="https://www.facebook.com/ClinicMatic69/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -43,7 +43,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6285117266788"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"

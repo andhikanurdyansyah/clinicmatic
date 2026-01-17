@@ -57,7 +57,7 @@ export default function Hero() {
             />
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 animate-slide-up leading-tight">
-            <span className="text-primary drop-shadow-lg">Clinic Matic</span>
+            <span className="text-primary drop-shadow-lg">Clinic Matic 69</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-3 sm:mb-4 animate-slide-up delay-100">
             Bengkel Spesialis Mobil Matic

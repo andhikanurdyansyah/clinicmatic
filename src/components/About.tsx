@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-4 sm:mb-6">
-              Tentang <span className="text-primary">Clinic Matic</span>
+              Tentang <span className="text-primary">Clinic Matic 69</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
               Clinic Matic adalah bengkel spesialis yang fokus pada perbaikan dan perawatan 
