@@ -143,7 +143,6 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Telepon</h4>
-                    <p className="text-white/90">+62 812-3456-7890</p>
                     <p className="text-white/90">+62 821-9876-5432</p>
                   </div>
                 </div>
@@ -157,7 +156,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-white/90">info@clinicmatic.com</p>
+                    <p className="text-white/90">clinicmatic69@gmail.com</p>
                     <p className="text-white/90">service@clinicmatic.com</p>
                   </div>
                 </div>
