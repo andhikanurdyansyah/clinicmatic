@@ -13,7 +13,7 @@ export default function Footer() {
                 alt="Clinic Matic 69 Logo" 
                 className="h-12 w-auto"
               />
-              <h3 className="text-2xl font-bold text-primary">Clinic Matic</h3>
+              <h3 className="text-2xl font-bold text-primary">Clinic Matic 69</h3>
             </div>
             <p className="text-gray-300 mb-4">
               Bengkel spesialis transmisi otomatis terpercaya dengan pengalaman lebih dari 10 tahun. 
