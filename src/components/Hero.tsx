@@ -346,7 +346,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
                 {/* Primary Button */}
                 <Link
-                  href="/kontak"
+                  href="#contact"
                   className="group/cta relative px-8 py-4 rounded-xl font-semibold text-base md:text-lg overflow-hidden transition-all duration-300"
                   style={{
                     transform: `perspective(1000px) rotateY(${mousePosition.x * 0.05}deg) rotateX(${-mousePosition.y * 0.05}deg) translateZ(10px)`,
