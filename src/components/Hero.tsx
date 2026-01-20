@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const ModernScene = dynamic(() => import('./3d/SimpleCarScene'), {
   ssr: false,
@@ -269,13 +271,16 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] translate-y-[-100%] group-hover/logo:translate-x-[100%] group-hover/logo:translate-y-[100%] transition-transform duration-1000" />
                     
                     {/* Logo image */}
-                    <img 
+                    <Image 
                       src="/logo.png" 
                       alt="Clinic Matic 69 Logo" 
+                      width={80}
+                      height={80}
                       className="relative w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover/logo:drop-shadow-[0_0_25px_rgba(220,38,38,0.8)] transition-all duration-300"
                       style={{
                         filter: 'brightness(1.1) contrast(1.1)',
                       }}
+                      priority
                     />
                   </div>
                 </div>
@@ -340,8 +345,8 @@ export default function Hero() {
               {/* Modern CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
                 {/* Primary Button */}
-                <a
-                  href="/#contact"
+                <Link
+                  href="/kontak"
                   className="group/cta relative px-8 py-4 rounded-xl font-semibold text-base md:text-lg overflow-hidden transition-all duration-300"
                   style={{
                     transform: `perspective(1000px) rotateY(${mousePosition.x * 0.05}deg) rotateX(${-mousePosition.y * 0.05}deg) translateZ(10px)`,
@@ -374,7 +379,7 @@ export default function Hero() {
                     </svg>
                     Konsultasi Gratis
                   </span>
-                </a>
+                </Link>
 
                 {/* Secondary Button */}
                 <a

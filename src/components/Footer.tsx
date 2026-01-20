@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -8,9 +10,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="Clinic Matic 69 Logo" 
+                width={48}
+                height={48}
                 className="h-12 w-auto"
               />
               <h3 className="text-2xl font-bold text-primary">Clinic Matic 69</h3>

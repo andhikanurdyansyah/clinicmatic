@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function About() {
   return (
     <section id="about" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
@@ -51,10 +53,13 @@ export default function About() {
           <div className="relative">
             {/* Logo Besar untuk Branding */}
             <div className="flex justify-center mb-6 lg:mb-8">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="Clinic Matic 69 Logo" 
+                width={192}
+                height={192}
                 className="h-32 sm:h-40 md:h-48 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                priority
               />
             </div>
             
