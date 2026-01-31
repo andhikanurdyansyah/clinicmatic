@@ -201,8 +201,45 @@ export default function StructuredData() {
     ]
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://clinicmatic69.com/#organization",
+    "name": "Clinic Matic 69",
+    "legalName": "Clinic Matic 69",
+    "url": "https://clinicmatic69.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://clinicmatic69.com/logo.png",
+      "width": 512,
+      "height": 512,
+      "caption": "Clinic Matic 69 Logo"
+    },
+    "image": "https://clinicmatic69.com/logo.png",
+    "description": "Bengkel spesialis transmisi otomatis (matic) terpercaya di Bekasi",
+    "telephone": "+62-851-1726-6788",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Komp. Barata, Jl. Cempaka IV No.430, RT.007/RW.006",
+      "addressLocality": "Bekasi Utara",
+      "addressRegion": "Jawa Barat",
+      "postalCode": "17124",
+      "addressCountry": "ID"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ClinicMatic69/",
+      "https://www.instagram.com/clinicmatic69/"
+    ]
+  };
+
   return (
     <>
+      {/* Organization Schema - For Logo */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      
       {/* Local Business Schema */}
       <script
         type="application/ld+json"
