@@ -2,20 +2,25 @@ export default function StructuredData() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "@id": "https://clinicmatic69.com/#organization",
+    "@id": "https://clinicmatic69.com/#autorepair",
     "name": "Clinic Matic 69",
     "alternateName": "Clinic Matic",
-    "legalName": "Clinic Matic 69 Bengkel Transmisi Matic",
     "url": "https://clinicmatic69.com",
-    "logo": "https://clinicmatic69.com/logo.png",
-    "image": "https://clinicmatic69.com/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://clinicmatic69.com/logo.png",
+      "width": "512",
+      "height": "512"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://clinicmatic69.com/logo.png",
+      "width": "512",
+      "height": "512"
+    },
     "description": "Bengkel spesialis transmisi otomatis (matic) terpercaya di Bekasi dengan pengalaman lebih dari 15 tahun. Menyediakan layanan service, perbaikan, dan overhaul transmisi automatic untuk semua merk mobil.",
-    "slogan": "Spesialis Transmisi Matic Terpercaya",
     "telephone": "+62-851-1726-6788",
-    "email": "clinicmatic69@gmail.com",
     "priceRange": "$$",
-    "currenciesAccepted": "IDR",
-    "paymentAccepted": "Cash, Bank Transfer, QRIS",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Komp. Barata, Jl. Cempaka IV No.430, RT.007/RW.006",
@@ -48,26 +53,6 @@ export default function StructuredData() {
       "https://www.facebook.com/ClinicMatic69/",
       "https://www.instagram.com/clinicmatic69/"
     ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+62-851-1726-6788",
-      "contactType": "Customer Service",
-      "areaServed": "ID",
-      "availableLanguage": ["Indonesian"]
-    },
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "-6.208648",
-        "longitude": "106.989701"
-      },
-      "geoRadius": "50000"
-    },
-    "serviceArea": {
-      "@type": "City",
-      "name": "Bekasi"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -80,48 +65,54 @@ export default function StructuredData() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Layanan Clinic Matic 69",
-    "description": "Layanan spesialis transmisi matic yang kami sediakan",
     "itemListElement": [
       {
-        "@type": "Service",
-        "name": "Service Transmisi Matic Berkala",
-        "description": "Perawatan rutin transmisi matic untuk menjaga performa optimal kendaraan Anda",
-        "provider": {
-          "@type": "AutoRepair",
-          "name": "Clinic Matic 69"
-        },
-        "areaServed": "Bekasi"
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Service Transmisi Matic Berkala",
+          "description": "Perawatan rutin transmisi matic untuk menjaga performa optimal kendaraan Anda",
+          "provider": {
+            "@id": "https://clinicmatic69.com/#autorepair"
+          }
+        }
       },
       {
-        "@type": "Service",
-        "name": "Perbaikan Transmisi Matic",
-        "description": "Diagnosa dan perbaikan masalah transmisi matic dengan teknisi berpengalaman",
-        "provider": {
-          "@type": "AutoRepair",
-          "name": "Clinic Matic 69"
-        },
-        "areaServed": "Bekasi"
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Perbaikan Transmisi Matic",
+          "description": "Diagnosa dan perbaikan masalah transmisi matic dengan teknisi berpengalaman",
+          "provider": {
+            "@id": "https://clinicmatic69.com/#autorepair"
+          }
+        }
       },
       {
-        "@type": "Service",
-        "name": "Overhaul Transmisi Matic",
-        "description": "Overhaul menyeluruh transmisi matic dengan garansi resmi",
-        "provider": {
-          "@type": "AutoRepair",
-          "name": "Clinic Matic 69"
-        },
-        "areaServed": "Bekasi"
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Overhaul Transmisi Matic",
+          "description": "Overhaul menyeluruh transmisi matic dengan garansi resmi",
+          "provider": {
+            "@id": "https://clinicmatic69.com/#autorepair"
+          }
+        }
       },
       {
-        "@type": "Service",
-        "name": "Tuning Performa",
-        "description": "Optimasi performa transmisi matic untuk pengalaman berkendara yang lebih baik",
-        "provider": {
-          "@type": "AutoRepair",
-          "name": "Clinic Matic 69"
-        },
-        "areaServed": "Bekasi"
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Service",
+          "name": "Tuning Performa",
+          "description": "Optimasi performa transmisi matic untuk pengalaman berkendara yang lebih baik",
+          "provider": {
+            "@id": "https://clinicmatic69.com/#autorepair"
+          }
+        }
       }
     ]
   };
