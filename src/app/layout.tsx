@@ -40,11 +40,25 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
-  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/logo.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '192x192',
+      url: '/icon-192.png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/logo.png',
+    },
+  ],
   manifest: '/manifest.webmanifest',
   openGraph: {
     type: 'website',
@@ -55,10 +69,11 @@ export const metadata: Metadata = {
     description: 'Bengkel spesialis transmisi otomatis (matic) terpercaya di Bekasi dengan pengalaman 15+ tahun. Service & perbaikan semua merk mobil matic. Teknisi profesional, garansi resmi, harga transparan.',
     images: [
       {
-        url: '/logo.png',
+        url: 'https://clinicmatic69.com/logo.png',
         width: 1200,
         height: 630,
         alt: 'Clinic Matic 69 - Bengkel Spesialis Transmisi Matic Bekasi',
+        type: 'image/png',
       },
     ],
   },
