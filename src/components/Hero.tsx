@@ -68,7 +68,7 @@ export default function Hero() {
       {/* Theme Toggle Button */}
       <button
         onClick={() => setIsDark(!isDark)}
-        className="fixed top-6 right-6 z-50 p-3 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-xl"
+        className="fixed bottom-6 right-6 z-50 p-3 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-xl"
         aria-label="Toggle theme"
       >
         <div className="relative w-6 h-6">
