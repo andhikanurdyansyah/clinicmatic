@@ -182,7 +182,7 @@ export default function Testimonials() {
 
                   {/* Review */}
                   <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
-                    "{testimonial.review}"
+                    &quot;{testimonial.review}&quot;
                   </p>
 
                   {/* Date */}
