@@ -343,7 +343,7 @@ export default function Hero() {
               </p>
 
               {/* Modern CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-6">
                 {/* Primary Button */}
                 <Link
                   href="#contact"
@@ -402,6 +402,27 @@ export default function Hero() {
                     </svg>
                   </span>
                 </a>
+              </div>
+
+              {/* SEO Internal Link to Landing Page */}
+              <div className="text-center mb-16">
+                <Link
+                  href="/bengkel-mobil-matic-bekasi"
+                  className={`inline-flex items-center gap-2 text-sm md:text-base font-medium transition-all duration-300 px-6 py-3 rounded-full border ${
+                    isDark 
+                      ? 'text-orange-400 border-orange-500/30 hover:border-orange-500/60 hover:bg-orange-500/10' 
+                      : 'text-orange-600 border-orange-400/40 hover:border-orange-500/70 hover:bg-orange-50'
+                  }`}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Bengkel Mobil Matic Terpercaya di Bekasi</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
 
               {/* Modern Trust Indicators */}

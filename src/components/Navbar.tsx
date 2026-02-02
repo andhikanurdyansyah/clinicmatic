@@ -18,26 +18,34 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#', label: 'Beranda' },
-    { href: '#services', label: 'Layanan' },
-    { href: '#about', label: 'Tentang Kami' },
-    { href: '#contact', label: 'Hubungi Kami' },
+    { href: '/', label: 'Beranda' },
+    { href: '/#services', label: 'Layanan' },
+    { href: '/#about', label: 'Tentang Kami' },
+    { href: '/#contact', label: 'Hubungi Kami' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      setIsMobileMenuOpen(false);
-      
-      if (href === '#') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        const element = document.querySelector(href);
+    // Check if we're on homepage
+    const isHomepage = window.location.pathname === '/';
+    
+    if (href.startsWith('/#')) {
+      if (isHomepage) {
+        // On homepage, scroll to section
+        e.preventDefault();
+        setIsMobileMenuOpen(false);
+        const sectionId = href.replace('/#', '#');
+        const element = document.querySelector(sectionId);
         if (element) {
           const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 80;
           window.scrollTo({ top: offsetTop, behavior: 'smooth' });
         }
       }
+      // If not homepage, let Link component handle navigation to homepage with hash
+      else {
+        setIsMobileMenuOpen(false);
+      }
+    } else if (href === '/') {
+      setIsMobileMenuOpen(false);
     }
   };
 
