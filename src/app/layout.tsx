@@ -10,8 +10,10 @@ const inter = Inter({
   display: 'swap',
 });
 
+const baseUrl = process.env.HOMEPAGE_URL || 'https://clinicmatic69.com';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://clinicmatic69.com'),
+  metadataBase: new URL(baseUrl),
   title: {
     default: 'Clinic Matic 69 - Bengkel Spesialis Transmisi Matic Bekasi | Service & Perbaikan Terpercaya',
     template: '%s | Clinic Matic 69'
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     'service matic honda jazz',
     'bengkel matic terdekat'
   ],
-  authors: [{ name: 'Clinic Matic 69', url: 'https://clinicmatic69.com' }],
+  authors: [{ name: 'Clinic Matic 69', url: baseUrl }],
   creator: 'Clinic Matic 69',
   publisher: 'Clinic Matic 69',
   formatDetection: {
@@ -64,13 +66,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: 'https://clinicmatic69.com',
+    url: baseUrl,
     siteName: 'Clinic Matic 69',
     title: 'Clinic Matic 69 - Bengkel Spesialis Transmisi Matic Bekasi Terpercaya',
     description: 'Bengkel spesialis transmisi otomatis (matic) terpercaya di Bekasi dengan pengalaman 15+ tahun. Service & perbaikan semua merk mobil matic. Teknisi profesional, garansi resmi, harga transparan.',
     images: [
       {
-        url: 'https://clinicmatic69.com/logo.png',
+        url: `${baseUrl}/logo.png`,
         width: 1200,
         height: 630,
         alt: 'Clinic Matic 69 - Bengkel Spesialis Transmisi Matic Bekasi',
@@ -100,7 +102,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://clinicmatic69.com',
+    canonical: baseUrl,
   },
   category: 'Automotive Services',
 };

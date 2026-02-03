@@ -16,6 +16,8 @@ export default function Footer() {
                 width={48}
                 height={48}
                 className="h-12 w-auto"
+                loading="lazy"
+                quality={80}
               />
               <h3 className="text-2xl font-bold text-primary">Clinic Matic 69</h3>
             </div>

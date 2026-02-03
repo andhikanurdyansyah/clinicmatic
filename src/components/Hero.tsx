@@ -281,6 +281,7 @@ export default function Hero() {
                         filter: 'brightness(1.1) contrast(1.1)',
                       }}
                       priority
+                      quality={90}
                     />
                   </div>
                 </div>

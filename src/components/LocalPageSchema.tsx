@@ -1,4 +1,6 @@
 export default function LocalPageSchema() {
+  const baseUrl = process.env.HOMEPAGE_URL || 'https://clinicmatic69.com';
+  
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -7,13 +9,13 @@ export default function LocalPageSchema() {
         "@type": "ListItem",
         "position": 1,
         "name": "Beranda",
-        "item": "https://clinicmatic69.com"
+        "item": baseUrl
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Bengkel Mobil Matic Bekasi",
-        "item": "https://clinicmatic69.com/bengkel-mobil-matic-bekasi"
+        "item": `${baseUrl}/bengkel-mobil-matic-bekasi`
       }
     ]
   };
@@ -21,17 +23,17 @@ export default function LocalPageSchema() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    "@id": "https://clinicmatic69.com/bengkel-mobil-matic-bekasi#autorepair",
+    "@id": `${baseUrl}/bengkel-mobil-matic-bekasi#autorepair`,
     "name": "Clinic Matic 69 - Bengkel Mobil Matic Bekasi",
     "alternateName": "Bengkel Transmisi Matic Bekasi",
-    "url": "https://clinicmatic69.com/bengkel-mobil-matic-bekasi",
+    "url": `${baseUrl}/bengkel-mobil-matic-bekasi`,
     "logo": {
       "@type": "ImageObject",
-      "url": "https://clinicmatic69.com/logo.png",
+      "url": `${baseUrl}/logo.png`,
       "width": 512,
       "height": 512
     },
-    "image": "https://clinicmatic69.com/logo.png",
+    "image": `${baseUrl}/logo.png`,
     "description": "Bengkel mobil matic terpercaya di Bekasi Utara, Harapan Jaya. Spesialis service transmisi automatic, CVT, overhaul gearbox matic untuk semua merk mobil. Teknisi berpengalaman 15+ tahun.",
     "telephone": "+62-851-1726-6788",
     "priceRange": "$$",
@@ -99,7 +101,7 @@ export default function LocalPageSchema() {
     "@type": "Service",
     "serviceType": "Bengkel Mobil Matic Bekasi",
     "provider": {
-      "@id": "https://clinicmatic69.com/bengkel-mobil-matic-bekasi#autorepair"
+      "@id": `${baseUrl}/bengkel-mobil-matic-bekasi#autorepair`
     },
     "areaServed": {
       "@type": "City",

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://clinicmatic69.com';
+  const baseUrl = process.env.HOMEPAGE_URL || 'https://clinicmatic69.com';
   
   return [
     {

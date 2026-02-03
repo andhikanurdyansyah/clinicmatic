@@ -59,7 +59,8 @@ export default function About() {
                 width={192}
                 height={192}
                 className="h-32 sm:h-40 md:h-48 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300"
-                priority
+                loading="lazy"
+                quality={85}
               />
             </div>
             
