@@ -6,12 +6,17 @@ const nextConfig: NextConfig = {
   
   // Fix trailing slash issues
   trailingSlash: false,
+  skipTrailingSlashRedirect: true,
   
   // Ensure proper redirects
   async redirects() {
     return [
-      // Force non-www to www if needed (or remove if using non-www)
-      // Currently using non-www based on canonical
+      // Redirect trailing slash to non-trailing slash
+      {
+        source: '/:path+/',
+        destination: '/:path+',
+        permanent: true,
+      },
     ];
   },
   
