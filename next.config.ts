@@ -4,21 +4,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   transpilePackages: ['three'],
   
-  // Fix trailing slash issues
+  // IMPORTANT: Set to false to avoid redirect issues with Google crawlers
   trailingSlash: false,
-  skipTrailingSlashRedirect: true,
-  
-  // Ensure proper redirects
-  async redirects() {
-    return [
-      // Redirect trailing slash to non-trailing slash
-      {
-        source: '/:path+/',
-        destination: '/:path+',
-        permanent: true,
-      },
-    ];
-  },
   
   // Add security and SEO headers
   async headers() {
