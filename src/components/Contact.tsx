@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
+import { trackContactConversion } from '@/utils/gtag';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,10 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Track Google Ads Conversion
+    trackContactConversion();
+    
     // WhatsApp integration
     const message = `Halo Clinic Matic,%0A%0ANama: ${formData.name}%0ATelepon: ${formData.phone}%0AEmail: ${formData.email}%0AModel Mobil: ${formData.carModel}%0APesan: ${formData.message}`;
     window.open(`https://wa.me/6285117266788?text=${message}`, '_blank');

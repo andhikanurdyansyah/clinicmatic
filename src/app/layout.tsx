@@ -120,16 +120,17 @@ export default function RootLayout({
       <body className={inter.variable}>
         {children}
         
-        {/* Google Analytics */}
+        {/* Google tag (gtag.js) - Google Ads Conversion Tracking */}
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-V6TKXGT2V3"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-447038699"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-ads-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'AW-447038699');
             gtag('config', 'G-V6TKXGT2V3');
           `}
         </Script>
