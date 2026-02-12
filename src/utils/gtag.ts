@@ -1,8 +1,10 @@
 // Google Ads Conversion Tracking
+type GtagCommand = 'config' | 'event' | 'js' | 'set';
+
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+    gtag: (command: GtagCommand, ...args: unknown[]) => void;
   }
 }
 
